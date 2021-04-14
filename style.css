@@ -1,0 +1,539 @@
+:root {
+    --light-red : hsl(356, 100%, 66%); /* CTA TEXT*/
+    --very-light-red : hsl(355, 100%, 74%); /* CTA hover background*/
+    --very-dark-blue: hsl(208, 49%, 24%); /* Headings*/
+
+    --white : hsl(0, 0%, 100%); /* Text */
+    --grayish-blue : hsl(240, 2%, 79%); /* Footer text */
+    --very-dark-grayish-blue : hsl(207, 13%, 34%); /* Body copy */
+    --very-dark-black-blue : hsl(240, 10%, 16%); /* Footer bg */
+
+    /* Background gradient - Intro/CTA mobile nav */    
+    --very-light-red: hsl(13, 100%, 72%);
+    --light-red: hsl(353, 100%, 62%);
+
+    /* Background gradient - body */
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+*,
+*::after,
+*::before {
+    margin: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--white); }
+.attribution a { color: hsl(228, 67%, 86%); }
+
+.main-container {
+    width: 64vw;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: -10px;
+}
+
+/* MENU */
+#wrapperMenu {
+    font-family: 'Overpass', sans-serif;
+    width: 56vw;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 5px 5px 15px 5px var(--grayish-blue);
+    background-color: var(--white);
+    border-radius: 5px;
+
+    position: absolute;
+    left: 22%;
+    top: 15%;
+    display: none;
+}
+.show {display:block;}
+
+.nav-bar:hover {
+    cursor: pointer;
+}
+.title-menu {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.arrow {
+    margin-left: 5px;
+}
+
+.product, .company, .connect {
+    background-color: hsla(240, 1%, 86%, 0.61);
+    width: 48vw;
+    border-radius: 5px;
+    color: var(--very-dark-blue);
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2.2rem;
+    padding: 10px 0;
+
+    display: none;
+}
+
+.line {
+    width: 48vw;
+    border: 1px solid hsla(240, 1%, 86%, 0.61);
+    margin: 20px auto 15px auto;
+}
+
+/* Menu's buttons */
+.btn-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login, .signup {
+    outline: none;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    height: 40px;
+    width: 120px;
+    border-radius: 50px;
+}
+.login {
+    background-color: var(--white);
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.signup {
+    background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: white;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* FIRST PART with tryal, learn more and description */
+.header {
+    border-bottom-left-radius: 100px;
+    background-image: url(./images/bg-pattern-intro.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(353, 100%, 62%);
+    background-size: 230vw;
+    background-position: bottom 66% left 34.5%;
+}
+.logo-hamb {
+    display: flex;
+    flex-direction: row;
+}
+.header-logo {
+    text-align: left;
+    margin-left: 5vw;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    margin-right: 35vw;
+}
+.hdr-logo {
+    width: 70px;
+}
+.dropbtn {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    top: 50px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+.hamburger {
+    width: 30px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+}
+.title {
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 60px 4vw 10px 4vw;
+    line-height: 2.4rem;
+}
+.about-title {
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 6vw 40px 6vw;
+}
+
+/* Buttons */
+.btn {
+    padding-bottom: 130px;
+}
+button:hover {
+    cursor: pointer;
+}
+.start, .learn {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    width: 110px;
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+}
+.start {
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    color: var(--light-red);
+}
+.learn {
+    border: 1px solid var(--white);
+    background-color:inherit;
+    color: var(--white);
+}
+
+/* Second part */
+.black-title {
+    font-family: 'Overpass', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0 9vw 15px 9vw;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+}
+.black-text {
+    color: var(--grayish-blue);
+    font-size:  14px;
+    width: 54vw;
+    margin: 0 auto 40px auto;
+    line-height: 1.5rem;
+}
+.designed {
+    margin: 90px auto 40px auto;
+}
+
+/* Second part images */
+.editor {
+    width: 350px;
+    height: 290px;
+    margin: 0 auto 30px -3vw;
+}
+.editor-desktop {
+    display: none;
+}
+.mobiles {
+    width: 320px;
+    z-index: 2;
+    margin-top: 30px;
+}
+.laptop {
+    width: 420px;
+    height: 300px;
+    margin-top: -120px;
+    margin-bottom: 30px;
+}
+.laptop-img {
+margin-left: -10vw;
+}
+
+/* Purple container */
+.purple-container {
+    background-color:var(--very-dark-gray-blue);
+    height: 540px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-image: url(./images/bg-pattern-circles.svg);
+    background-size: 110vw;
+    background-repeat: no-repeat;
+    background-position: top -230px left -24vw;
+    z-index: -1;
+    position: relative;
+    top: -180px;
+}
+.white-title {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 32px;
+    padding-top: 190px;
+    line-height: 2.8rem;
+}
+.white-text {
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+    font-size: 14px;
+    width: 54vw;
+    line-height: 1.5rem;
+    margin: 20px auto 0 auto;
+}
+
+/* footer container and lists */
+.footer {
+    background-color: var(--very-dark-black-blue);
+    border-top-right-radius: 100px;
+    margin-bottom: -8px;
+}
+.ftr-logo {
+    width: 90px;
+    margin: 70px 0 35px 0;
+}
+.footer-title {
+    color: var(--white);
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+li {
+    display: block;
+}
+.list1, .list2, .list3 {
+    color: var(--grayish-blue);
+    font-size: 15px;
+    line-height: 1.8rem;
+}
+.list3 {
+    padding-bottom: 45px;
+}
+
+/**************************************/
+/* DESKTOP SIZE */
+@media (min-width: 800px) {
+body {
+    overflow-x: hidden;
+}
+
+.main-container {
+    width: 100vw;
+    margin-left: -8px;
+}
+
+.header {
+    background-position: bottom 49% left 24.5%;
+    background-color: var(--very-light-red);
+}
+
+/* NAV & Login / Singup */
+.hdr-logo {
+    width: 6.94vw;
+    margin-left: 5.55vw;
+}
+nav {
+    display: flex;
+    color: var(--white);
+    margin-left: 30px;
+}
+.arrow {
+    -webkit-filter: sepia(20);
+    filter: contrast(6000%);
+    margin-right: 2.08vw;
+}
+.line {
+    display: none;
+}
+.btn-menu {
+    display: inline-block;
+}
+
+.hamburger {
+    display: none;
+}
+
+.btn-menu {
+    position: relative;
+    top: -50px;
+    left: 55%;
+}
+.login {
+    color: var(--white);
+    background-color: unset;
+    font-size: 16px;
+}
+.signup {
+    color: var(--light-red);
+    background: unset;
+    background-color: var(--white);
+    height: 50px;
+    width: 140px;   
+    font-size: 17px;
+}
+
+#wrapperMenu {
+    display: block;
+    background-color: unset;
+    box-shadow: unset;
+    margin-top: -60px;
+}
+.product, .company, .connect {
+    background-color: hsl(0, 0%, 100%);
+    width: 100px;
+    border-radius: 5px;
+    color: var(--very-dark-blue);
+    margin: 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2.2rem;
+    padding: 10px 0;
+
+    display: none;
+    
+    position: absolute;
+    left: -35%;
+    top: 60px;
+}
+
+.product {
+    position: absolute;
+    /*left: 2%;*/
+    left: 15px;
+    top: 40%;
+}
+.company {
+    position: absolute;
+    /*left:16%;*/
+    left: 120px;
+    top: 40%;
+}
+.connect {
+    position: absolute;
+    /*left:30%;*/
+    left:230px;
+    top: 40%;
+}
+
+/* A modern ... & buttons for tryal / learn */
+.title {
+    font-size: 4.236vw;
+    margin-top: 100px;
+}
+.about-title {
+    font-size: 1.38vw;
+    margin-top: 30px;
+}
+
+.start, .learn {
+    font-size: 17px;
+    font-weight: 700;
+    width: 150px;
+    height: 50px;
+}
+.start {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* White background / Second part */
+.black-title {
+    text-align: left;
+    font-size: 1.875vw;
+    margin-left: 10.42vw;
+    margin-bottom: 30px;
+    color: var(--very-dark-blue);
+}
+.black-text {
+    font-family: 'Overpass', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    line-height: 3.5vh;
+    width: 34.86vw;
+    margin-left: 10.42vw;
+    margin-bottom: 70px;
+}
+.designed {
+    font-size: 2.5vw;
+    text-align: center;
+    margin-bottom: 120px;
+    margin-left: 0;
+    margin-top: 160px;
+}
+.editor {
+    display: none;
+    width: 55.55vw;
+    height: auto;
+    position: absolute;
+    right: -8%;
+    top: 12%;
+}
+.editor-desktop {
+    display: unset;
+    position: absolute;
+    width: 63.55vw;
+    height: auto;
+    right: -18%;
+    top: 77%;
+}
+
+/* Purple container */
+.purple-container {
+    margin-top: -130px;
+    height: 50.49vh;
+    background-size: 1050px;
+    background-position: top -530px left -16vw;
+}
+.mobiles {
+    width: 38.19vw;
+    position: relative;
+    left: -22%;
+    top: 200px;
+}
+.white-title {
+    text-align: left;
+    margin-left: 51.66vw;
+    font-size: 38px;
+    padding-top: 120px;
+}
+.white-text {
+    text-align: left;
+    margin-left: 51.66vw;
+    width: 38.19vw;
+    font-size: 17px;
+}
+
+/* Laptop img & Description */
+.free, .powerful, .about-free, .about-powerful {
+    margin-left: 51.66vw;
+}
+.laptop {
+    width: 74.30vw;
+    height: auto;
+    position: relative;
+    left: -24.3%;
+    top: 80px;
+}
+.free {
+    margin-top: -38.19vw;
+}
+
+/* Black Footer container */
+.footer {
+    text-align: left;
+    display: grid;
+    grid-template-rows: 135px 200px;
+    grid-template-columns: 31.59vw 20.13vw 20.13vw 27.77vw;
+   
+}
+.ftr-logo {
+    width: 6.94vw;
+    margin-left: 11.52vw;
+    grid-row: 1;
+    grid-column: 1;
+}
+.footer-title {
+    grid-row: 1;
+    margin-top: 80px;
+}
+.prod, .list1 {
+    grid-column: 2;
+}
+.com, .list2 {
+    grid-column: 3;
+}
+.con, .list3 {
+    grid-column: 4;
+}
+
+
+}
