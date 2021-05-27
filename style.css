@@ -17,14 +17,15 @@
     --very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
-*,
-*::after,
-*::before {
-    margin: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
 }
 
 body {
-    font-family: 'Overpass', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -32,16 +33,14 @@ body {
 .attribution a { color: hsl(228, 67%, 86%); }
 
 .main-container {
-    width: 64vw;
+    width: 100%;
     text-align: center;
-    margin: 0px auto;
-    margin-top: -10px;
 }
 
 /* MENU */
 #wrapperMenu {
     font-family: 'Overpass', sans-serif;
-    width: 56vw;
+    width: 80%;
     text-align: center;
     margin: 0 auto;
     box-shadow: 5px 5px 15px 5px var(--grayish-blue);
@@ -49,7 +48,7 @@ body {
     border-radius: 5px;
 
     position: absolute;
-    left: 22%;
+    left: 10%;
     top: 15%;
     display: none;
 }
@@ -69,10 +68,9 @@ body {
 
 .product, .company, .connect {
     background-color: hsla(240, 1%, 86%, 0.61);
-    width: 48vw;
+    width: 100%;
     border-radius: 5px;
     color: var(--very-dark-blue);
-    margin: 0 auto;
     font-size: 14px;
     font-weight: 500;
     line-height: 2.2rem;
@@ -82,7 +80,7 @@ body {
 }
 
 .line {
-    width: 48vw;
+    width: 85%;
     border: 1px solid hsla(240, 1%, 86%, 0.61);
     margin: 20px auto 15px auto;
 }
@@ -118,6 +116,7 @@ body {
 
 /* FIRST PART with tryal, learn more and description */
 .header {
+    width: 100%;
     border-bottom-left-radius: 100px;
     background-image: url(./images/bg-pattern-intro.svg);
     background-repeat: no-repeat;
@@ -131,7 +130,7 @@ body {
 }
 .header-logo {
     text-align: left;
-    margin-left: 5vw;
+    margin-left: 10vw;
     padding-top: 50px;
     margin-bottom: 30px;
     margin-right: 35vw;
@@ -200,7 +199,7 @@ button:hover {
 /* Second part */
 .black-title {
     font-family: 'Overpass', sans-serif;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 700;
     margin: 0 9vw 15px 9vw;
     line-height: 1.6rem;
@@ -209,7 +208,7 @@ button:hover {
 .black-text {
     color: var(--grayish-blue);
     font-size:  14px;
-    width: 54vw;
+    width: 80%;
     margin: 0 auto 40px auto;
     line-height: 1.5rem;
 }
@@ -219,21 +218,21 @@ button:hover {
 
 /* Second part images */
 .editor {
-    width: 350px;
-    height: 290px;
-    margin: 0 auto 30px -3vw;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 30px auto;
 }
 .editor-desktop {
     display: none;
 }
 .mobiles {
-    width: 320px;
+    width: 90%;
     z-index: 2;
     margin-top: 30px;
 }
 .laptop {
     width: 420px;
-    height: 300px;
+    height: auto;
     margin-top: -120px;
     margin-bottom: 30px;
 }
@@ -267,7 +266,7 @@ margin-left: -10vw;
     font-family: 'Overpass', sans-serif;
     color: var(--white);
     font-size: 14px;
-    width: 54vw;
+    width: 80%;
     line-height: 1.5rem;
     margin: 20px auto 0 auto;
 }
@@ -303,14 +302,9 @@ li {
 /* DESKTOP SIZE */
 @media (min-width: 800px) {
 body {
+    width: 100%;
     overflow-x: hidden;
 }
-
-.main-container {
-    width: 100vw;
-    margin-left: -8px;
-}
-
 .header {
     background-position: bottom 49% left 24.5%;
     background-color: var(--very-light-red);
@@ -343,9 +337,9 @@ nav {
 }
 
 .btn-menu {
-    position: relative;
-    top: -50px;
-    left: 55%;
+    position: absolute;
+    top: 5%;
+    left: 65%;
 }
 .login {
     color: var(--white);
@@ -363,9 +357,12 @@ nav {
 
 #wrapperMenu {
     display: block;
+    width: 60%;
     background-color: unset;
     box-shadow: unset;
-    margin-top: -60px;
+    position: absolute;
+    top: 5%;
+    left: 30%;
 }
 .product, .company, .connect {
     background-color: hsl(0, 0%, 100%);
@@ -379,29 +376,22 @@ nav {
     padding: 10px 0;
 
     display: none;
-    
-    position: absolute;
-    left: -35%;
-    top: 60px;
 }
 
 .product {
     position: absolute;
-    /*left: 2%;*/
     left: 15px;
-    top: 40%;
+    top: 80%;
 }
 .company {
     position: absolute;
-    /*left:16%;*/
     left: 120px;
-    top: 40%;
+    top: 80%;
 }
 .connect {
     position: absolute;
-    /*left:30%;*/
     left:230px;
-    top: 40%;
+    top: 80%;
 }
 
 /* A modern ... & buttons for tryal / learn */
@@ -426,6 +416,13 @@ nav {
 
 
 /* White background / Second part */
+.main-container {
+    background-image: url(./images/illustration-editor-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-x: 140%;
+    background-position-y: 28%;
+}
 .black-title {
     text-align: left;
     font-size: 1.875vw;
@@ -451,19 +448,6 @@ nav {
 }
 .editor {
     display: none;
-    width: 55.55vw;
-    height: auto;
-    position: absolute;
-    right: -8%;
-    top: 12%;
-}
-.editor-desktop {
-    display: unset;
-    position: absolute;
-    width: 63.55vw;
-    height: auto;
-    right: -18%;
-    top: 77%;
 }
 
 /* Purple container */
@@ -497,11 +481,12 @@ nav {
     margin-left: 51.66vw;
 }
 .laptop {
-    width: 74.30vw;
+    width: 60%;
     height: auto;
     position: relative;
     left: -24.3%;
-    top: 80px;
+    top: 0px;
+    transform: translate(0%, 10%);
 }
 .free {
     margin-top: -38.19vw;
@@ -512,8 +497,8 @@ nav {
     text-align: left;
     display: grid;
     grid-template-rows: 135px 200px;
-    grid-template-columns: 31.59vw 20.13vw 20.13vw 27.77vw;
-   
+    grid-template-columns: 31.59vw 20.13vw 20.13vw 20.77vw;
+    margin-top: 180px;
 }
 .ftr-logo {
     width: 6.94vw;
@@ -536,4 +521,25 @@ nav {
 }
 
 
+}
+
+
+@media (max-width: 1025px) {
+    #wrapperMenu {
+        top: 3%;
+        width: auto;
+    }
+
+    .btn-menu {
+        left: 120%;
+        width: 300px;
+    }
+
+    .black-text {
+        line-height: 1.8rem;
+    }
+
+    .laptop {
+        transform: translate(0%, 20%);
+    }
 }
