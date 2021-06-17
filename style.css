@@ -24,9 +24,9 @@
 }
 
 body {
+    font-family: 'Ubuntu', sans-serif;
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Ubuntu', sans-serif;
 }
 
 .attribution { font-size: 11px; text-align: center; color: var(--white); }
@@ -46,7 +46,6 @@ body {
     box-shadow: 5px 5px 15px 5px var(--grayish-blue);
     background-color: var(--white);
     border-radius: 5px;
-
     position: absolute;
     left: 10%;
     top: 15%;
@@ -75,7 +74,6 @@ body {
     font-weight: 500;
     line-height: 2.2rem;
     padding: 10px 0;
-
     display: none;
 }
 
@@ -114,6 +112,7 @@ body {
     margin-bottom: 30px;
 }
 
+
 /* FIRST PART with tryal, learn more and description */
 .header {
     width: 100%;
@@ -121,7 +120,7 @@ body {
     background-image: url(./images/bg-pattern-intro.svg);
     background-repeat: no-repeat;
     background-color: hsl(353, 100%, 62%);
-    background-size: 230vw;
+    background-size: 300%;
     background-position: bottom 66% left 34.5%;
 }
 .logo-hamb {
@@ -133,7 +132,7 @@ body {
     margin-left: 10vw;
     padding-top: 50px;
     margin-bottom: 30px;
-    margin-right: 35vw;
+    margin-right: 55vw;
 }
 .hdr-logo {
     width: 70px;
@@ -231,14 +230,12 @@ button:hover {
     margin-top: 30px;
 }
 .laptop {
-    width: 420px;
+    width: 100%;
     height: auto;
     margin-top: -120px;
     margin-bottom: 30px;
 }
-.laptop-img {
-margin-left: -10vw;
-}
+
 
 /* Purple container */
 .purple-container {
@@ -302,9 +299,10 @@ li {
 /* DESKTOP SIZE */
 @media (min-width: 800px) {
 body {
-    width: 100%;
     overflow-x: hidden;
+    width: 100%;
 }
+
 .header {
     background-position: bottom 49% left 24.5%;
     background-color: var(--very-light-red);
@@ -316,7 +314,7 @@ body {
     margin-left: 5.55vw;
 }
 nav {
-    display: flex;
+    display: flex !important;
     color: var(--white);
     margin-left: 30px;
 }
@@ -326,14 +324,14 @@ nav {
     margin-right: 2.08vw;
 }
 .line {
-    display: none;
+    display: none !important;
 }
 .btn-menu {
     display: inline-block;
 }
 
 .hamburger {
-    display: none;
+    display: none !important;
 }
 
 .btn-menu {
@@ -356,7 +354,7 @@ nav {
 }
 
 #wrapperMenu {
-    display: block;
+    display: block !important;
     width: 60%;
     background-color: unset;
     box-shadow: unset;
@@ -376,6 +374,8 @@ nav {
     padding: 10px 0;
 
     display: none;
+    
+
 }
 
 .product {
